@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$=+02c4+z(kw#_m&lz9qq8tu1@23d#8#5oym%#7v-jbhvh@gc5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['namantam1.pythonanywhere.com']
+ALLOWED_HOSTS = ['namantam1.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'filer.apps.FilerConfig',
 ]
 
 MIDDLEWARE = [
@@ -106,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/kolkata'
 
 USE_I18N = True
 
@@ -122,9 +123,9 @@ STATIC_URL = '/static/'
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = '/home/Namantam1/tempfiler/media'
+MEDIA_ROOT =  BASE_DIR / 'media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = '/home/Namantam1/tempfiler/static'
+STATIC_ROOT =  BASE_DIR / 'static'
 STATIC_URL = '/static/'
 
 # Default primary key field type
