@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.timezone import now
 
 import os
 import uuid
@@ -15,3 +16,10 @@ class MyFile(models.Model):
     expire_on = models.DateTimeField()
     myfile = models.FileField(upload_to=get_file_path)
 
+    @classmethod
+    def delete_expired(cls):
+        files = cls.objects.filter(expire_on__lte=now())
+
+        for f in files:
+            print("deleting... ", f)
+            f.delete()

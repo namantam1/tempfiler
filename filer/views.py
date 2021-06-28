@@ -31,3 +31,10 @@ class UploadFile(generics.CreateAPIView):
 class GetFileDelete(generics.RetrieveAPIView, generics.DestroyAPIView):
     serializer_class = UploadFileSerializer
     queryset = MyFile.objects.all()
+
+
+class DeleteExpired(generics.GenericAPIView):
+
+    def get(self, *args, **kwargs):
+        MyFile.delete_expired()
+        return Response("deleted expired...")

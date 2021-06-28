@@ -19,10 +19,11 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from filer.views import UploadFile, GetFileDelete
+from filer.views import UploadFile, GetFileDelete, DeleteExpired
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('upload/', UploadFile.as_view()),
+    path('delete/', DeleteExpired.as_view()),
     path('get_delete/<int:pk>/', GetFileDelete.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
