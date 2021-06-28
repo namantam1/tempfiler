@@ -76,9 +76,18 @@ WSGI_APPLICATION = 'tempfiler.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+
     'test': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Namantam1$filetemper',
+        'USER': 'Namantam1',
+        'PASSWORD': 'Naman123#@',
+        'HOST': 'Namantam1.mysql.pythonanywhere-services.com',
+
     }
 }
 
