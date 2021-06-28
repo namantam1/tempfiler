@@ -26,7 +26,7 @@ def get_now():
 factory = APIRequestFactory()
 
 
-def upload_request(time=5):
+def upload_request(time=2):
     """
     return request of upload
     """
@@ -67,7 +67,7 @@ class FileTestCase(TestCase):
         self.assertTrue(self.check_path(res.data['myfile']))
 
         print("slept deleting... ")
-        sleep(5)
+        sleep(2)
         call_command("delete_file")
         self.assertFalse(self.check_path(res.data['myfile']))
 
@@ -107,7 +107,7 @@ class FileTestCase(TestCase):
         self.assertTrue(self.check_path(res.data['myfile']))
 
         print("slept deleting... ")
-        sleep(5)
+        sleep(2)
 
         res1 = delete_expired_view(factory.get("/delete/"))
 

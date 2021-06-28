@@ -79,10 +79,10 @@ if os.environ.get("PRODUCTION", "") == "true":
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'Namantam1$filetemper',
-            'USER': 'Namantam1',
-            'PASSWORD': 'Naman123#@',
-            'HOST': 'Namantam1.mysql.pythonanywhere-services.com',
+            'NAME': os.getenv("NAME"),
+            'USER': os.getenv("USER"),
+            'PASSWORD': os.getenv("PASSWORD"),
+            'HOST': os.getenv('HOST'),
         }
     }
 else:
