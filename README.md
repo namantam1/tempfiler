@@ -1,4 +1,5 @@
 [![codecov](https://codecov.io/gh/namantam1/tempfiler/branch/main/graph/badge.svg?token=I9T16R1WYJ)](https://codecov.io/gh/namantam1/tempfiler)
+[![Django CI](https://github.com/namantam1/tempfiler/actions/workflows/django.yml/badge.svg)](https://github.com/namantam1/tempfiler/actions/workflows/django.yml)
 
 # Tempfiler
 
