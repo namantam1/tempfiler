@@ -3,7 +3,7 @@
 
 # Tempfiler
 
-This is simple teampory file storage where you can store your file upto 30 days.
+This is simple teampory file storage where you can store your file up to 30 days.
 
 
 ## Usage
