@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/namantam1/tempfiler/branch/main/graph/badge.svg?token=I9T16R1WYJ)](https://codecov.io/gh/namantam1/tempfiler)
+
 # Tempfiler
 
 This is simple teampory file storage where you can store your file upto 30 days.
